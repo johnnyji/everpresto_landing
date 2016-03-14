@@ -1,0 +1,24 @@
+$image-height-small: 150px;
+$image-width-small: 100px;
+
+.ImageTrio {
+  @include display(flex);
+  margin: 0 auto;
+  position: relative;
+  &-left, &-right {
+    height: $image-height-small;                   
+    width: $image-width-small;
+  }
+  &-center {
+    position: relative;
+    height: $image-height-small * 2;
+    width: $image-width-small * 2;
+    &-image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+    }
+  }
+} 

@@ -36,7 +36,7 @@ app.get('/*', function(req, res) {
 
 var port = Number(process.env.PORT || 3001);
 app.listen(port, function () {
-  console.log('server running at localhost:3001, go refresh and see magic');
+  console.info('server running at localhost:3001');
 });
 
 if (env.production === false) {
@@ -47,20 +47,22 @@ if (env.production === false) {
 
   new WebpackDevServer(webpack(webpackDevConfig), {
     publicPath: '/client/',
-    contentBase: './client/',
+    contentBase: __dirname,
     inline: true,
     hot: true,
-    stats: false,
-    historyApiFallback: true,
+    noInfo: false,
+    quiet: false,
+    stats: {
+      errorDetails: true,
+      colors: true
+    },
+    hostname: 'localhost',
     headers: {
       'Access-Control-Allow-Origin': 'http://localhost:3001',
       'Access-Control-Allow-Headers': 'X-Requested-With'
     }
   }).listen(3000, 'localhost', function (err) {
-    if (err) {
-      console.log(err);
-    }
-
-    console.log('webpack dev server listening on localhost:3000');
+    if (err) console.error(err);
+    console.info('Webpack Dev Server listening on localhost:3000');
   });
 }

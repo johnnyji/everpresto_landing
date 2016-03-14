@@ -1,4 +1,11 @@
 .Home {
   @include display(flex);
   @include flex-direction(column);
+  &-jumbotron {
+    margin: 36px auto;
+    &-title {
+      color: $white;
+      text-align: center;
+    }
+  }
 }

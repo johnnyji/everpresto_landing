@@ -10,7 +10,7 @@ export default {
       imageTrio: {
         left: `${IMG_PATH}/collections.png`,
         center: `${IMG_PATH}/document_creation2.png`,
-        right: `${IMG_PATH}/template.png`
+        right: `${IMG_PATH}/templates.png`
       }
     }
   } 

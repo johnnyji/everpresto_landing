@@ -17,9 +17,7 @@ export default class ImageTrio extends Component {
     return (
       <section className={displayName}>
         <img className={`${displayName}-left`} src={this.props.left} />
-        <div className={`${displayName}-center`}>
-          <img className={`${displayName}-center-image`} src={this.props.center} />
-        </div>
+        <img className={`${displayName}-center`} src={this.props.center} />
         <img className={`${displayName}-right`} src={this.props.right} />
       </section>
     );

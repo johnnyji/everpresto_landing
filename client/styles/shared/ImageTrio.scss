@@ -1,24 +1,27 @@
-$image-height-small: 150px;
-$image-width-small: 100px;
+$image-height: 300px;
+$image-width: 400px;
 
 .ImageTrio {
   @include display(flex);
-  margin: 0 auto;
+  @include justify-content(center);
   position: relative;
   &-left, &-right {
-    height: $image-height-small;                   
-    width: $image-width-small;
+    height: $image-height;                 
+    width: $image-width;
+    @include align-self(flex-end);
+  }
+  &-left {
+    margin-right: -($image-width * 0.5);
+  }
+  &-right {
+    margin-left: -($image-width * 0.5);
   }
   &-center {
     position: relative;
-    height: $image-height-small * 2;
-    width: $image-width-small * 2;
+    height: $image-height * 1.25;
+    width: $image-width * 1.25;
     &-image {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      top: 0;
-      right: 0;
+      position: relative;
     }
   }
 } 

@@ -1,0 +1,9 @@
+.Header {
+  background: transparent;
+  height: 40px;
+  margin: 0 40px;
+  &-logo {
+    @extend .logo-font;
+    color: $white;
+  } 
+}

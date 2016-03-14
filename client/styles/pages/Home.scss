@@ -1,7 +1,4 @@
 .Home {
   @include display(flex);
-  &-logo {
-    @extends .logo-font;
-    color: $white;
-  }
+  @include flex-direction(column);
 }

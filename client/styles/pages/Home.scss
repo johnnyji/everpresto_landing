@@ -1,0 +1,7 @@
+.Home {
+  @include display(flex);
+  &-logo {
+    @extends .logo-font;
+    color: $white;
+  }
+}

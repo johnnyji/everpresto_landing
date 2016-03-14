@@ -1,0 +1,15 @@
+@import '~bourbon/app/assets/stylesheets/_bourbon';
+@import './colors';
+@import './extends';
+
+@import 'pages/Home';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-color;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica Neue", serif;
+}

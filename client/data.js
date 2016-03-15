@@ -8,9 +8,9 @@ export default {
       main: 'We automate your form signing process',
       sub: 'So have time to do other things',
       imageTrio: {
-        left: `${IMG_PATH}/collections.png`,
-        center: `${IMG_PATH}/document_creation2.png`,
-        right: `${IMG_PATH}/templates.png`
+        left: `${IMG_PATH}/browser_screens/collections.jpg`,
+        center: `${IMG_PATH}/browser_screens/document_creation_2.png`,
+        right: `${IMG_PATH}/browser_screens/templates.png`
       }
     }
   } 

@@ -16,6 +16,7 @@ export default class Home extends Component {
           <h1 className={`${displayName}-jumbotron-title`}>{home.intro.main}</h1>
           <h2 className={`${displayName}-jumbotron-title`}>{home.intro.sub}</h2>
           <ImageTrio
+            className={`${displayName}-jumbotron-image-trio`}
             center={home.intro.imageTrio.center}
             left={home.intro.imageTrio.left}
             right={home.intro.imageTrio.right} />

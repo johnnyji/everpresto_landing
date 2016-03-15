@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import classNames from 'classnames';
 import pureRender from 'pure-render-decorator';
 
 const displayName = 'ImageTrio';
@@ -14,11 +15,13 @@ export default class ImageTrio extends Component {
   };
 
   render() {
+    const {center, className, left, right} = this.props;
+
     return (
-      <section className={displayName}>
-        <img className={`${displayName}-left`} src={this.props.left} />
-        <img className={`${displayName}-center`} src={this.props.center} />
-        <img className={`${displayName}-right`} src={this.props.right} />
+      <section className={classNames({[className]: className}, displayName)}>
+        <img className={`${displayName}-left`} src={left} />
+        <img className={`${displayName}-center`} src={center} />
+        <img className={`${displayName}-right`} src={right} />
       </section>
     );
   }

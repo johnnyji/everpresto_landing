@@ -1,25 +1,27 @@
-$image-height: 300px;
-$image-width: 400px;
+$image-height: 450px;
+$image-width: 585px;
 
 .ImageTrio {
   @include display(flex);
   @include justify-content(center);
   position: relative;
   &-left, &-right {
+    @extend .image-box-shadow;
+    @include align-self(flex-end);
     height: $image-height;                 
     width: $image-width;
-    @include align-self(flex-end);
   }
   &-left {
-    margin-right: -($image-width * 0.5);
+    margin-right: -($image-width * 0.7);
   }
   &-right {
-    margin-left: -($image-width * 0.5);
+    margin-left: -($image-width * 0.7);
   }
   &-center {
+    @extend .image-box-shadow;
     position: relative;
-    height: $image-height * 1.25;
-    width: $image-width * 1.25;
+    height: $image-height * 1.075;
+    width: $image-width * 1.075;
     &-image {
       position: relative;
     }

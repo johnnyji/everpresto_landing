@@ -2,6 +2,8 @@
   @include display(flex);
   @include flex-direction(column);
   &-jumbotron {
+    @include display(flex);
+    @include flex-direction(column);
     margin: 36px auto;
     &-title {
       color: $white;
@@ -10,8 +12,28 @@
       margin: 8px;
       text-align: center;
     }
+    &-sign-up-button {
+      @extend .sign-up-button;
+    }
     &-image-trio {
       margin-top: 2rem;
+    }
+  }
+  &-section {
+    padding: 2rem 4rem;
+    h1 {
+      text-align: center; 
+    }
+    &-light {
+      background: $white;
+    }
+    &-benefit-cards {
+      @extend .content-wrapper;
+      @include display(flex);
+      @include flex-wrap(wrap);
+      &-card {
+        @include flex(1 0 50%);
+      }
     }
   }
 }

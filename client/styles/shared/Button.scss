@@ -1,0 +1,11 @@
+.Button {
+  @extend .button-box-shadow; 
+  @extend .transition;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}

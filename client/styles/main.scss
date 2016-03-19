@@ -1,8 +1,11 @@
 @import '~bourbon/app/assets/stylesheets/_bourbon';
 @import './colors';
+@import './dimensions';
 @import './extends';
 
 @import 'pages/Home';
+@import 'shared/BenefitCard';
+@import 'shared/Button';
 @import 'shared/Header';
 @import 'shared/ImageTrio';
 
@@ -14,4 +17,5 @@ body {
   background: $background-color;
   box-sizing: border-box;
   font-family: "Roboto", "Helvetica Neue", serif;
+  margin: 0;
 }

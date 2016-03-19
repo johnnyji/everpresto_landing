@@ -7,3 +7,33 @@
   -moz-box-shadow: 0px 0px 23px -2px rgba(40,40,40,1);
   box-shadow: 0px 0px 23px -2px rgba(40,40,40,1);
 }
+
+.button-box-shadow {
+  -webkit-box-shadow: -2px 3px 11px -3px rgba(0, 0, 0, 0.75);
+  -mox-box-shadow: -2px 3px 11px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 3px 11px -3px rgba(0, 0, 0, 0.75);
+}
+
+// Wraps content so it doesn't over-stretch on large screens
+.content-wrapper {
+  max-width: $maxContentWidth;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-up-button {
+  background-color: $greenDark;
+  color: $white;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'Indie Flower', 'Roboto', sans-serif;
+  margin: 3rem auto;
+  padding: 1rem 1.5rem;
+  &:hover {
+    background-color: $green;
+  }
+}
+
+.transition {
+  @include transition(all 250ms ease-in-out);
+}

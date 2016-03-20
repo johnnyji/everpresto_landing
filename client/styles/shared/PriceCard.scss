@@ -2,24 +2,24 @@
   @extend .button-box-shadow;
   @include display(flex);
   @include flex-direction(column);
-  width: 350px;
+  width: 375px;
   &-title {
     background-color: $brand-color;
     color: $white;
     font-size: 2.5rem;
     font-weight: 300;
     margin: 0;
-    padding: 2.5rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
   }
   &-features {
     @include flex-grow(1);
     color: $grayLight;
     list-style: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-align: center;
     &-feature {
-      padding: 1.5rem 0;
+      padding: 1.25rem 0;
       &:not(:last-child) {
         border-bottom: 1px solid $grayLighter;
       }
@@ -27,6 +27,7 @@
     &-join {
       @extend .sign-up-button;  
       @include align-self(flex-end);
+      font-size: 1.7rem;
       margin: 0 auto 2rem;
       padding: 0.5rem 1.25rem;
     } 

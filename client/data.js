@@ -48,7 +48,7 @@ export default {
           'Store up to 5,000 forms',
           'Scheduled email reminders in signers',
           'Ability to mass export signed forms',
-          'Everything else in the "Free" package!'
+          'Everything in the "Free" package!'
         ]
       },
       {
@@ -57,7 +57,7 @@ export default {
           'Up to 100 users/account',
           'Unlimited Templates',
           'Unlimited Form Storage',
-          'Everything else in the "$30 per month" package!'
+          'Everything in the "$30 per month" package!'
         ]
       }
     ]

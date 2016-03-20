@@ -27,12 +27,21 @@
     &-light {
       background: $white;
     }
-    &-benefit-cards {
+    &-benefit-cards,
+    &-price-cards {
       @extend .content-wrapper;
       @include display(flex);
+    }
+    &-benefit-cards {
       @include flex-wrap(wrap);
       &-card {
         @include flex(1 0 50%);
+      }
+    }
+    &-price-cards {
+      @include justify-content(space-around);
+      &-card {
+        @include flex(0 0 200px);
       }
     }
   }

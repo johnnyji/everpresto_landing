@@ -1,0 +1,34 @@
+.PriceCard {
+  @extend .button-box-shadow;
+  @include display(flex);
+  @include flex-direction(column);
+  width: 350px;
+  &-title {
+    background-color: $brand-color;
+    color: $white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+  &-features {
+    @include flex-grow(1);
+    color: $grayLight;
+    list-style: none;
+    padding: 1rem;
+    text-align: center;
+    &-feature {
+      padding: 1.5rem 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid $grayLighter;
+      }
+    }
+    &-join {
+      @extend .sign-up-button;  
+      @include align-self(flex-end);
+      margin: 0 auto 2rem;
+      padding: 0.5rem 1.25rem;
+    } 
+  }
+}

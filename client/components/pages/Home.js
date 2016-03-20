@@ -3,6 +3,8 @@ import Button from 'components/shared/Button';
 import BenefitCard from 'components/shared/BenefitCard';
 import Header from 'components/shared/Header';
 import ImageTrio from 'components/shared/ImageTrio';
+import PriceCard from 'components/shared/PriceCard';
+
 import {home} from 'data';
 
 const displayName = 'Home'; 
@@ -13,6 +15,7 @@ export default class Home extends Component {
     return (
       <main className={displayName}>
         <Header />
+        
         <section className={`${displayName}-jumbotron`}>
           <h1 className={`${displayName}-jumbotron-title`}>{home.jumbotron.main}</h1>
           <h2 className={`${displayName}-jumbotron-title`}>{home.jumbotron.sub}</h2>
@@ -27,6 +30,7 @@ export default class Home extends Component {
             center={home.jumbotron.imageTrio.center}
             right={home.jumbotron.imageTrio.right} />
         </section>
+
         <section className={`${displayName}-section-light ${displayName}-section`}>
           <h1>{home.benefits.title}</h1>
           <div className={`${displayName}-section-benefit-cards`}>
@@ -40,12 +44,28 @@ export default class Home extends Component {
             ))} 
           </div>
         </section>
+
+        <section className={`${displayName}-section-light ${displayName}-section`}>
+          <div className={`${displayName}-section-price-cards`}>
+            {this._renderPrices()}
+          </div>
+        </section>
       </main>
     );
   }
 
+  _renderPrices = () => {
+    return home.prices.map((price, i) => (
+      <PriceCard
+        className={`${displayName}-section-prices-cards-card`}
+        key={i}
+        features={price.features}
+        title={price.title} /> 
+    )); 
+  };
+
   _showEmailModal = () => {
     console.log('hit');
-  }
+  };
 
 }

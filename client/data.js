@@ -27,5 +27,39 @@ export default {
           image: `${IMG_PATH}/benefits/bulk_send.jpg`
         }
       ]
-    }
-  } };
+    },
+    prices: [
+      {
+        title: 'Free',
+        features: [
+          '1 user/account',
+          'Up to 3 templates',
+          'Store up to 1,000 forms',
+          'Bulk send forms with ease',
+          'Import signers',
+          'Automation and alerts'
+        ]
+      },
+      {
+        title: '$30/mo.',
+        features: [
+          'Up to 5 users/account',
+          'Up to 10 templates',
+          'Store up to 5,000 forms',
+          'Scheduled email reminders in signers',
+          'Ability to mass export signed forms',
+          'Everything else in the "Free" package!'
+        ]
+      },
+      {
+        title: '$100/mo.',
+        features: [
+          'Up to 100 users/account',
+          'Unlimited Templates',
+          'Unlimited Form Storage',
+          'Everything else in the "$30 per month" package!'
+        ]
+      }
+    ]
+  }
+};

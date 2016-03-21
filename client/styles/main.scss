@@ -10,6 +10,8 @@
 @import 'shared/ImageTrio';
 @import 'shared/PriceCard';
 
+@import 'decorators/View';
+
 *, *:before, *:after {
   box-sizing: border-box;
 }

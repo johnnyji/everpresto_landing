@@ -1,0 +1,22 @@
+.View {
+  @include display(flex);
+  @include flex-direction(column);
+  &-main {
+    @include flex-grow(1);
+  }
+  &-footer {
+    @include flex-grow(0);
+    @include display(flex);
+    @include align-items(center);
+    background: $white;
+    border-top: 1px solid $grayLighter;
+    color: $grayLight;
+    min-height: 75px;
+    padding: 2rem;
+    &-logo {
+      @extend .logo-font;
+      display: inline-block;
+      padding: 0 1rem 0 0.5rem;
+    }
+  }
+}

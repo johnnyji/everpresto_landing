@@ -16,10 +16,10 @@
     @include flex-grow(1);
     color: $grayLight;
     list-style: none;
-    padding: 1rem 2rem;
+    padding: 1rem;
     text-align: center;
     &-feature {
-      padding: 1.25rem 0;
+      padding: 1.25rem;
       &:not(:last-child) {
         border-bottom: 1px solid $grayLighter;
       }

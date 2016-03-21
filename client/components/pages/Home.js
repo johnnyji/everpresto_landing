@@ -1,23 +1,36 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
+import classNames from 'classnames';
 import Button from 'components/shared/Button';
 import BenefitCard from 'components/shared/BenefitCard';
 import Header from 'components/shared/Header';
 import ImageTrio from 'components/shared/ImageTrio';
 import PriceCard from 'components/shared/PriceCard';
+import View from 'components/decorators/View';
 
 import {home} from 'data';
 
 const displayName = 'Home'; 
+
+@View
 export default class Home extends Component {
   static displayName = displayName;
 
+  static propTypes = {
+    className: PropTypes.string
+  };
+
   render() {
+    const classes = classNames({
+      [this.props.className]: this.props.className,
+      [displayName]: true
+    });
+
     return (
-      <main className={displayName}>
+      <div className={classes}>
         <Header />
         
         <section className={`${displayName}-jumbotron`}>
-          <h1 className={`${displayName}-jumbotron-title`}>{home.jumbotron.main}</h1>
+          <h1 className={`${displayName}-jumbotron-title`}>{home.jumbotron.div}</h1>
           <h2 className={`${displayName}-jumbotron-title`}>{home.jumbotron.sub}</h2>
           <Button
             className={`${displayName}-jumbotron-sign-up-button`}
@@ -50,7 +63,8 @@ export default class Home extends Component {
             {this._renderPrices()}
           </div>
         </section>
-      </main>
+        
+      </div>
     );
   }
 

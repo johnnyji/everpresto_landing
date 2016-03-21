@@ -1,6 +1,5 @@
 .Home {
-  @include display(flex);
-  @include flex-direction(column);
+
   &-jumbotron {
     @include display(flex);
     @include flex-direction(column);
@@ -19,8 +18,9 @@
       margin-top: 2rem;
     }
   }
+
   &-section {
-    padding: 2rem 4rem;
+    padding: 4rem;
     h1 {
       text-align: center; 
     }
@@ -45,4 +45,5 @@
       }
     }
   }
+
 }

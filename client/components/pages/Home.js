@@ -30,7 +30,7 @@ export default class Home extends Component {
         <Header />
         
         <section className={`${displayName}-jumbotron`}>
-          <h1 className={`${displayName}-jumbotron-title`}>{home.jumbotron.div}</h1>
+          <h1 className={`${displayName}-jumbotron-title`}>{home.jumbotron.main}</h1>
           <h2 className={`${displayName}-jumbotron-title`}>{home.jumbotron.sub}</h2>
           <Button
             className={`${displayName}-jumbotron-sign-up-button`}
@@ -45,7 +45,7 @@ export default class Home extends Component {
         </section>
 
         <section className={`${displayName}-section-light ${displayName}-section`}>
-          <h1>{home.benefits.title}</h1>
+          <h1 className={`${displayName}-section-title`}>{home.benefits.title}</h1>
           <div className={`${displayName}-section-benefit-cards`}>
             {home.benefits.segments.map((segment, i) => (
               <BenefitCard

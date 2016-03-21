@@ -19,12 +19,12 @@ export default {
         {
           title: "Bulk email forms with ease",
           description: "Everpresto allows you to import a list of signers, and with the single click of a button, you're able to send your forms to everyone who needs to sign, talk about convenient!",
-          image: `${IMG_PATH}/benefits/bulk_send.png`
+          image: `${IMG_PATH}/import.png`
         },
         {
           title: "We'll keep you updated on the process",
           description: "Once you've send your forms out to be signed, you can kick back and take it easy! We'll take care of the rest and notify you when everyone has signed",
-          image: `${IMG_PATH}/benefits/bulk_send.jpg`
+          image: `${IMG_PATH}/collections.png`
         }
       ]
     },

@@ -23,10 +23,12 @@ export default class BenefitCard extends Component {
 
     return (
       <section className={classes}>
-        <img className={`${displayName}-image`} src={image} />
-        <aside className={`${displayName}-info`}>
-          <h1 className={`${displayName}-info-title`}>{title}</h1>
-          <p className={`${displayName}-info-description`}>{description}</p>
+        <aside className={`${displayName}-image-section`}>
+          <img className={`${displayName}-image-section-image`} src={image} />
+        </aside>
+        <aside className={`${displayName}-info-section`}>
+          <h1 className={`${displayName}-info-section-title`}>{title}</h1>
+          <p className={`${displayName}-info-section-description`}>{description}</p>
         </aside>
       </section>
     );

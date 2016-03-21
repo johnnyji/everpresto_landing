@@ -21,8 +21,11 @@
 
   &-section {
     padding: 4rem;
-    h1 {
-      text-align: center; 
+    &-title {
+      @extend .logo-font;
+      font-weight: bold;
+      text-align: center;
+      font-size: 40px;
     }
     &-light {
       background: $white;
@@ -34,8 +37,9 @@
     }
     &-benefit-cards {
       @include flex-wrap(wrap);
-      &-card {
-        @include flex(1 0 50%);
+      // Makes sure benefit cards are alternating orientation of text and image every second one
+      &-card:nth-child(even) {
+        @include flex-direction(row-reverse);  
       }
     }
     &-price-cards {
